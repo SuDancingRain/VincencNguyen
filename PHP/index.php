@@ -8,7 +8,7 @@
         <meta name="copyright" content="Vincenc Nguyen" />
         <meta name="description" content="Webová stránka" />
         <meta name="keywords" content="html, css, js" />
-        <link rel="stylesheetc" type="text/css" href="css/style.css" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
         <link rel="shortcut icon" href="img/" />
     </head>
     <body lang="cs">
