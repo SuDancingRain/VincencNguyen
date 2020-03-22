@@ -1,0 +1,45 @@
+body{
+    background-color: black;
+    color: cyan;
+}
+body div div div{
+    font-size: 15px;
+    color: Green;
+}
+div.class div div{
+    font-size: 25px;
+    color: Red;
+}
+img{
+    width: 150px;
+    height: 150px;
+}
+body div ul li{
+    float: left;
+    margin-right: 35px;
+}
+body div.menu ul li{
+    color: violet;
+    font-size: 25px;
+    list-style: none;
+}
+body div ul li a{
+    text-decoration: none;
+    color: darkgreen;
+}
+body div ul li a:hover{
+    color: greenyellow;
+}
+body div ul li.circle{
+    list-style-type: circle;
+}
+body div ul li.none{
+    list-style-type: none;
+}
+body div ul li.disc{
+    list-style-type: disc;
+}
+body div ul li.square{
+    list-style-type: square;
+}
+
