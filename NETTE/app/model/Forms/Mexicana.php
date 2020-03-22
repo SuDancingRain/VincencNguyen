@@ -27,13 +27,13 @@ class Mexicana extends \Nette\Application\UI\Form {
         $this->addText('number', 'number')->setRequired('Number needed')
                 ->addRule(\Nette\Forms\Form::INTEGER, 'Not a Number.');
         
-        $this->addRadioList('food', 'Food', array('tortila', 'quasadila', 'burito'));
+        $this->addRadioList('food', 'Food', array('tortila'=>'tortila', 'quasadila'=>'quasadila', 'burito'=>'burito'));
 
-        $this->addCheckboxList('fillings', 'Fillings', array('Cheesse', 'Beef', 'Pork','Chicken', 'Beans', 'Chilli Sauce','Garlic Sauce','Herb Sauce'));
+        $this->addCheckboxList('fillings', 'Fillings', array('Cheesse'=>'Cheesse', 'Beef'=>'Beef', 'Pork'=>'Pork','Chicken'=>'Chicken', 'Beans'=>'Beans','Chilli Sauce'=> 'Chilli Sauce','Garlic Sauce'=>'Garlic Sauce','Herb Sauce'=>'Herb Sauce'));
 
         $this->addTextArea('message', 'Details', 40, 6);
        
-        $this->addSelect('delivery', 'Pick up here or delivered', array('Pick up', 'Deliver'));
+        $this->addSelect('delivery', 'Pick up here or delivered', array('Pick up'=>'Pick up', 'Deliver'=>'Deliver'));
         
         $this->addUpload('Upload');
         
