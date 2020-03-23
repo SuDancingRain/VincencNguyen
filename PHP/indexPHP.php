@@ -56,3 +56,7 @@
         echo $blank ->blank();
         
         require 'ext/i3.php';
+        
+        echo $blank->blank();
+        
+        require 'ext/oop.php';
