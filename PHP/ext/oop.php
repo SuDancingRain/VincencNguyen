@@ -1,14 +1,34 @@
 <?php
-include 'class/iustrednyNguyen.php'; // inkludovani interfacu
-include 'class/ustrednyNguyen.php'; // inkludovani abstraktni tridy
-include 'class/ustrednaNguyen.php'; // inkludovani dedici tridy
+/**
+ * inkludovani interfacu
+ */
+include 'class/iustrednyNguyen.php'; 
+/**
+ * inkludovani abstraktni tridy
+ */
+include 'class/ustrednyNguyen.php';  
+/**
+ * inkludovani dedici tridy
+ */
+include 'class/ustrednaNguyen.php'; 
 
-$napetiNguyen = 24; // atribut podle ktereho nastavime napeti
-
-$newNguyen = new ustrednaNguyen(); // instance tridy ustrednaNguyen
-
-var_dump($newNguyen::TYPE); // vypsani ve var dump constanty TYPE
-
-$newNguyen->setNapetiNguyen($napetiNguyen);     // nastaveni atributu pomoci instacniho pristupu k fuknci
-
-var_dump($newNguyen->getNapetiNguyen());        // vypsani atributu ve var dump instancnim zpusobem
+/**
+ * atribut podle ktereho nastavime napeti
+ */
+$napetiNguyen = 24; 
+/**
+ * instance tridy ustrednaNguyen
+ */
+$newNguyen = new ustrednaNguyen(); 
+/**
+ * vypsani ve var dump constanty TYPE
+ */
+var_dump($newNguyen::TYPE); 
+/**
+ * nastaveni atributu pomoci instacniho pristupu k fuknci
+ */
+$newNguyen->setNapetiNguyen($napetiNguyen);      
+/**
+ * vypsani atributu ve var dump instancnim zpusobem
+ */
+var_dump($newNguyen->getNapetiNguyen());        
