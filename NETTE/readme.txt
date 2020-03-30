@@ -15,8 +15,8 @@ Installation
 The best way to install Web Project is using Composer. If you don't have Composer yet,
 download it following [the instructions](https://doc.nette.org/composer). Then use command:
 
-		composer create-project nette/sandbox path/to/install
-		cd path/to/install
+	composer create-project nette/sandbox path/to/install
+	cd path/to/install
 
 
 Make directories `temp/` and `log/` writable.
@@ -27,7 +27,7 @@ Web Server Setup
 
 The simplest way to get started is to start the built-in PHP server in the root directory of your project:
 
-		php -S localhost:8000 -t www
+	php -S localhost:8000 -t www
 
 Then visit `http://localhost:8000` in your browser to see the welcome page.
 
@@ -41,7 +41,10 @@ via a web browser. See [security warning](https://nette.org/security-warning).
 Requirements
 ------------
 
-PHP 5.3.1 or higher. To check whether server configuration meets the minimum requirements for
+- Sandbox for Nette 2.4 requires PHP 5.6
+- The master version of Sandbox requires PHP 7.1
+
+To check whether server configuration meets the minimum requirements for
 Nette Framework browse to the directory `/checker` in your project root (i.e. `http://localhost:8000/checker`).
 
 
@@ -52,7 +55,16 @@ Adminer
 To use it, browse to the subdirectory `/adminer` in your project root (i.e. `http://localhost:8000/adminer`).
 
 
-License
--------
-- Nette: New BSD License or GPL 2.0 or 3.0
-- Adminer: Apache License 2.0 or GPL 2
+Notice: Composer PHP version
+----------------------------
+
+This project forces PHP 5.6 (eventually 7.1) as your PHP version for Composer packages. If you have newer 
+version on production server you should change it in `composer.json`:
+
+```json
+"config": {
+	"platform": {
+		"php": "7.2"
+	}
+}
+```

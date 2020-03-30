@@ -14,22 +14,21 @@ class ExampleTest extends Tester\TestCase
 	private $container;
 
 
-	function __construct(Nette\DI\Container $container)
+	public function __construct(Nette\DI\Container $container)
 	{
 		$this->container = $container;
 	}
 
 
-	function setUp()
+	public function setUp()
 	{
 	}
 
 
-	function testSomething()
+	public function testSomething()
 	{
-		Assert::true(TRUE);
+		Assert::true(true);
 	}
-
 }
 
 
