@@ -43,60 +43,11 @@ class Mexican extends Nette\Application\UI\Form {
         $this->addText('number', 'number')
                 ->setRequired(TRUE)
                 ->addRule(\Nette\Forms\Form::PATTERN, 'Not a Number.', '([0-9]){9}');
-/*
+
         $this->addText('address', 'Address')
                 ->setRequired(TRUE)
-                ->addRule($validator, $errorMessage, $arg);
-           
-        $this->addCheckboxList('pets', 'Pets?', array('dog', 'cat', 'bird', 'fish', 'bunny', 'reptile ', 'other'))
-                ->setRequired(TRUE)
-                ->addRule($validator, $errorMessage, $arg);
-
-        $this->addText('questionPets', 'specify')
-                ->setRequired(TRUE)
-                ->addRule($validator, $errorMessage, $arg);
-
-        $this->addRadioList('cook', 'Can you cook', array('yes', 'no'))
-                ->setRequired(TRUE)
-                ->addRule($validator, $errorMessage, $arg);
-
-        $this->addRadioList('bloodType', 'Blood Type', array('A', 'B', '0', 'A/B', 'Don\'t know'))
-                ->setRequired(TRUE)
-                ->addRule($validator, $errorMessage, $arg);
-
-        $this->addRadioList('guns', 'Can you shoot a gun', array('yes', 'no'))
-                ->setRequired(TRUE)
-                ->addRule($validator, $errorMessage, $arg);
-
-        $this->addRadioList('bow', 'Can you shoot an arrow and a bow', array('yes', 'no'))
-                ->setRequired(TRUE)
-                ->addRule($validator, $errorMessage, $arg);
-
-        $this->addRadioList('sing', 'Can you sing', array('yes', 'no'))
-                ->setRequired(TRUE)
-                ->addRule($validator, $errorMessage, $arg);
-
-        $this->addRadioList('dance', 'Can you dance', array('yes', 'no'))
-                ->setRequired(TRUE)
-                ->addRule($validator, $errorMessage, $arg);
-
-        $this->addRadioList('craft', 'Can you craft', array('yes', 'no'))
-                ->setRequired(TRUE)
-                ->addRule($validator, $errorMessage, $arg);
-
-        $this->addRadioList('play', 'Can you play an instrument', array('yes', 'no'))
-                ->setRequired(TRUE)
-                ->addRule($validator, $errorMessage, $arg);
-
-        $this->addCheckboxList('instruments', 'instruments', array('guitar', 'drums', 'piano', 'violin', 'trombone', 'trumpet ', 'other', 'none'))
-                ->setRequired(TRUE)
-                ->addRule($validator, $errorMessage, $arg);
-
-        $this->addText('questionInstruments', 'specify')
-                ->setRequired(TRUE)
-                ->addRule($validator, $errorMessage, $arg);
- 
-         */
+                ->addRule(self::PATTERN, 'Need an actual address', '.*[a-zA-Z]+ [0-9].*');
+       
         $this->addTextArea('message', 'Details', 15, 5)
                  ->setRequired('Leave additional details or write none');
                 
