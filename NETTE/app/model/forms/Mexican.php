@@ -35,19 +35,19 @@ class Mexican extends Nette\Application\UI\Form {
         $this->addPassword('password2', 'password again')
                 ->setRequired(TRUE)
                 ->addRule(\Nette\Forms\Form::EQUAL, 'Doesn\'t Match', $this['password']);
-/*
+
         $this->addEmail('email', 'Email')
                 ->setRequired(TRUE)
-                ->addRule(\Nette\Forms\Form::EMAIL, 'Not an valid address');
-
-        $this->addText('address', 'Address')
-                ->setRequired(TRUE)
-                ->addRule($validator, $errorMessage, $arg);
-                
+                ->addRule(\Nette\Forms\Form::EMAIL, 'Not an valid address'); 
+        
         $this->addText('number', 'number')
                 ->setRequired(TRUE)
                 ->addRule(\Nette\Forms\Form::INTEGER, 'Not a Number.');
-
+/*
+        $this->addText('address', 'Address')
+                ->setRequired(TRUE)
+                ->addRule($validator, $errorMessage, $arg);
+           
         $this->addCheckboxList('pets', 'Pets?', array('dog', 'cat', 'bird', 'fish', 'bunny', 'reptile ', 'other'))
                 ->setRequired(TRUE)
                 ->addRule($validator, $errorMessage, $arg);
