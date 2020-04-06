@@ -23,11 +23,7 @@ class Mexican extends Nette\Application\UI\Form {
         $this->addText('username', 'username')
                 ->setRequired(TRUE)
                 ->addRule(self::PATTERN, 'Not a username', '[A-Za-z].*[A-Za-z0-9].*');
-        
-        $this->addText('name', 'name')
-                ->setRequired(TRUE)
-                ->addRule(self::PATTERN, 'Not a name', '.*[A-Za-z].*');
-        
+       
         $this->addPassword('password', 'password')
                 ->setRequired(TRUE)
                 ->addRule(\Nette\Forms\Form::MIN_LENGTH, 'At least 6 symbols long', 6);
@@ -40,6 +36,10 @@ class Mexican extends Nette\Application\UI\Form {
                 ->setRequired(TRUE)
                 ->addRule(\Nette\Forms\Form::EMAIL, 'Not an valid address'); 
         
+         $this->addText('name', 'name')
+                ->setRequired(TRUE)
+                ->addRule(self::PATTERN, 'Not a name', '.*[A-Za-z].*');
+         
         $this->addText('number', 'number')
                 ->setRequired(TRUE)
                 ->addRule(\Nette\Forms\Form::PATTERN, 'Not a Number.', '([0-9]\s*){9}');
@@ -95,12 +95,12 @@ class Mexican extends Nette\Application\UI\Form {
         $this->addText('questionInstruments', 'specify')
                 ->setRequired(TRUE)
                 ->addRule($validator, $errorMessage, $arg);
-
-        $this->addTextArea('message', 'Details', 40, 6)
-                 ->setRequired(TRUE)
-                ->addRule($validator, $errorMessage, $arg);
-        * 
+ 
          */
+        $this->addTextArea('message', 'Details', 15, 5)
+                 ->setRequired('Leave additional details or write none');
+                
+       
         $this->addSubmit('send', 'Send');
     
          
