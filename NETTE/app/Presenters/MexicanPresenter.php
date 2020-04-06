@@ -10,7 +10,7 @@ namespace App\Presenters;
 
 /**
  * Description of MexicanPresenter
- *
+ *Formular na mexickou restauraci
  * @author Dancing Rain
  */
 class MexicanPresenter extends \Nette\Application\UI\Presenter{
