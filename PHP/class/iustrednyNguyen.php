@@ -7,10 +7,10 @@ interface iustrednyNguyen {
     /**
      * funkce ktera se musi implementovat
      */
-    function getNapetiNguyen(); 
+    function getNapetiNguyen() : int ; 
     /**
      * funkce ktera se musi implementovat
-     * @param type $napetiNguyen
+     * @param float $napetiNguyen
      */
-    function setNapetiNguyen($napetiNguyen); 
+    function setNapetiNguyen(int $napetiNguyen); 
 }

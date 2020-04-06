@@ -6,7 +6,7 @@
  * and open the template in the editor.
  */
 
-
+/**
         require 'ext/if.php';
 
         echo $blank->blank();
@@ -58,5 +58,5 @@
         require 'ext/i3.php';
         
         echo $blank->blank();
-        
+        */
         require 'ext/oop.php';
