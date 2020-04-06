@@ -1,5 +1,5 @@
 <?php
-
+declare(strict_types=1);
 /**
  * abstraktni trida ktera se neda instancovat a implementuje interface
  */
@@ -11,22 +11,22 @@ abstract class ustrednyNguyen implements iustrednyNguyen{
   */
     protected $napetiNguyen; 
   
-  /**
-   *funkce pro ziskani hodnoty atributu implementovana z interfacu
-   * @return type
-   */
-  
-    function getNapetiNguyen() {
-      return $this->napetiNguyen;
-  }
 
-  /**
-   * fuknce ktera nastavi hodnotu atributu implementovana z interfacu
-   * @param type $napetiNguyen
-   */
+ /**
+  * fuknce ktera nastavi hodnotu atributu
+  * @param int $napetiNguyen
+  */
    
-  function setNapetiNguyen($napetiNguyen) {
+  function setNapetiNguyen(int $napetiNguyen)  {
       $this->napetiNguyen = $napetiNguyen;
+  }
+  
+  /**
+     * funkce pro ziskani hodnoty atributu
+     * @return int
+     */
+    function getNapetiNguyen() : int {
+      return $this->napetiNguyen;
   }
 
 
