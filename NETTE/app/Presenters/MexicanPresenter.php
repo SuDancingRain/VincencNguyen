@@ -14,18 +14,15 @@ namespace App\Presenters;
  * @author Dancing Rain
  */
 class MexicanPresenter extends \Nette\Application\UI\Presenter{
-    public function renderMexican() {
-        
-    }
+   
      public function createComponentMexican($name) {
         return new \Mexican($this, $name);
     }
  
     
-    public function renderSuccess(){
-       // var_dump($this->getRequest()->getParameters());
-       // die;
-      $this->template->params = $this->getRequest()->getParameters();
+    public function actionSuccess(){
+       $params = $this->getRequest();
+        $this->template->params = $params->post;
         
     }
 }

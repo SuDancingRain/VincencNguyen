@@ -18,7 +18,7 @@ class Mexican extends Nette\Application\UI\Form {
 
         $this->setAction($parent->link('Mexican:success'));
 
-        $this->setMethod("GET");
+        $this->setMethod("POST");
 
         $this->addText('username', 'username')
                 ->setRequired(TRUE)
@@ -51,7 +51,9 @@ class Mexican extends Nette\Application\UI\Form {
         $this->addTextArea('message', 'Details', 15, 5)
                  ->setRequired('Leave additional details or write none');
                 
-       
+         $this->addUpload('upload', 'Upload')
+                 ->setRequired('Give us some memes');
+        
         $this->addSubmit('send', 'Send');
     
          
