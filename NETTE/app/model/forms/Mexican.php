@@ -42,7 +42,7 @@ class Mexican extends Nette\Application\UI\Form {
         
         $this->addText('number', 'number')
                 ->setRequired(TRUE)
-                ->addRule(\Nette\Forms\Form::INTEGER, 'Not a Number.');
+                ->addRule(\Nette\Forms\Form::PATTERN, 'Not a Number.', '([0-9]\s*){9}');
 /*
         $this->addText('address', 'Address')
                 ->setRequired(TRUE)
