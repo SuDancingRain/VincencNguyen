@@ -1,5 +1,10 @@
 <?php
 /**
+ * Checks return type
+ * @author Vincenc nguyen
+ */
+declare(strict_types= 1);
+/**
  * inkludovani interfacu
  * @author Vincenc nguyen
  */
@@ -19,7 +24,7 @@ include 'class/ustrednaNguyen.php';
  * atribut podle ktereho nastavime napeti
  * @author Vincenc nguyen
  */
-$napetiNguyen = 24.3; 
+$napetiNguyen = 243; 
 /**
  * instance tridy ustrednaNguyen
  * @author Vincenc nguyen

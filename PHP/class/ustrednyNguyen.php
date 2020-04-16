@@ -1,10 +1,6 @@
 
 <?php
-/**
- * Checks return type
- * @author Vincenc nguyen
- */
-declare(strict_types= 1);
+
 /**
  * abstraktni trida ktera se neda instancovat a implementuje interface
  * @author Vincenc nguyen
