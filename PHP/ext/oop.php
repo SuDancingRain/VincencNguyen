@@ -15,7 +15,7 @@ include 'class/ustrednaNguyen.php';
 /**
  * atribut podle ktereho nastavime napeti
  */
-$napetiNguyen = 24; 
+$napetiNguyen = 24.3; 
 /**
  * instance tridy ustrednaNguyen
  */
