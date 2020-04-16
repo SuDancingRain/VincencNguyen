@@ -6,11 +6,13 @@
 interface iustrednyNguyen {
     /**
      * funkce ktera se musi implementovat
+     * @author Vincenc nguyen
      */
-    function getNapetiNguyen() : int ; 
+    function getNapetiNguyen(); 
     /**
      * funkce ktera se musi implementovat
-     * @param float $napetiNguyen
+     * @author Vincenc nguyen
+     * @param int $napetiNguyen
      */
     function setNapetiNguyen(int $napetiNguyen); 
 }
