@@ -2,6 +2,7 @@
 
 /**
  *  interface ve kterem jsou predem dane funkce ktere musi class implementovat
+ * @author Vincenc nguyen
  */
 interface iustrednyNguyen {
     /**
