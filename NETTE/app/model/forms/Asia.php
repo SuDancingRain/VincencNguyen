@@ -7,16 +7,16 @@
  */
 
 /**
- * Description of Mexican
+ * Description of Asia
  *
  * @author Dancing Rain
  */
-class Mexican extends Nette\Application\UI\Form {
+class Asia extends Nette\Application\UI\Form {
 
     public function __construct($parent, $name) {
         parent::__construct();
 
-        $this->setAction($parent->link('Mexican:success'));
+        $this->setAction($parent->link('Asia:success'));
 
         $this->setMethod("POST");
 

@@ -9,14 +9,14 @@
 namespace App\Presenters;
 
 /**
- * Description of MexicanPresenter
+ * Description of AsiaPresenter
  *Formular na mexickou restauraci
  * @author Dancing Rain
  */
-class MexicanPresenter extends \Nette\Application\UI\Presenter{
+class AsiaPresenter extends \Nette\Application\UI\Presenter{
    
-     public function createComponentMexican($name) {
-        return new \Mexican($this, $name);
+     public function createComponentAsia($name) {
+        return new \Asia($this, $name);
     }
  
     
