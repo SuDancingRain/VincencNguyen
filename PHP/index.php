@@ -12,6 +12,7 @@
         <link rel="shortcut icon" href="img/" />
     </head>
     <body lang="cs">
+       <!--
         <p>Overview <br> Overkill  <span> Overdone</span></p>  
 
         <hr>
@@ -122,7 +123,7 @@
                 </dd>   
             </dl>
         </form>        
-
+-->
         <?php
         require 'class/OwnFunctions.php';
         $blank = new OwnFunctions();
