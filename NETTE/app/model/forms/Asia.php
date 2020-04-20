@@ -52,35 +52,35 @@ class Asia extends Nette\Application\UI\Form {
                 ->setRequired('Need address to deliver douche')
                 ->addRule(self::PATTERN, 'Need an actual address', '.*[a-zA-Z]+ [0-9].*');
 
-        $this->addRadioList('time', 'Time', ['breakfeast' => 'breakfeast', 'lunch' => 'lunch', 'dinner' => 'dinner'])
+        $this->addRadioList('time', 'Time', ['Morning' => 'Morning', 'Afternoon' => 'Afternoon', 'Evening' => 'Evening'])
                 ->setRequired('Give us the Time boss')
                 ->getSeparatorPrototype()->setName('Time');
 
-        $this->addRadioList('meal', 'Meal', ['burrito' => 'burrito', 'tortila' => 'tortila'])
-                ->setRequired('Give us the Meal boss')
+        $this->addRadioList('deliverySpeed', 'Delivery Speed', ['normal' => 'normal', 'express' => 'express'])
+                ->setRequired('How fast you need me boss ??')
                 ->getSeparatorPrototype()->setName('Meal');
 
-        $this->addSelect('meats', 'Meats', ['Beef' => 'Beef', 'Chicken' => 'Chicken', 'Pork' => 'Pork'])
-                ->setRequired('Choose Meats')
-                ->setPrompt('Choose Meats');
+        $this->addSelect('rice', 'Rice', ['1 KG' => '1 KG', '2 KG' => '2 KG', '5 KG' => '5 KG'])
+                ->setRequired('Choose how much you need')
+                ->setPrompt('Choose amount');
 
-        $this->addSelect('veggies', 'Veggies', ['Cabbage' => 'Cabbage', 'Carrot' => 'Carrot'])
-                ->setRequired('Choose Veggies')
-                ->setPrompt('Choose Veggies');
+        $this->addSelect('noodles', 'Noodles', ['1 pack' => '1 pack', '5 pack' => '5 pack', '10 pack' => '10 pack'])
+                ->setRequired('Choose how much you need')
+                ->setPrompt('Choose amount');
 
-        $this->addSelect('sauce', 'Sauce', ['Spicy' => 'Spicy', 'Garlic' => 'Garlic', 'Tomato' => 'Tomato'])
-                ->setRequired('Choose Sauce')
-                ->setPrompt('Choose Sauce');
+        $this->addSelect('broth', 'Broth', ['1.5 liters' => '1.5 liters', '3 liters' => '3 liters', '5 liters' => '5 liters'])
+                ->setRequired('Choose how much you need')
+                ->setPrompt('Choose amount');
 
-        $this->addSelect('sides', 'Sides', ['Fries' => 'Fries', 'Baked Poatatoes' => 'Baked Poatatoes', 'Onion Rings' => 'Onion Rings'])
-                ->setRequired('Choose Sides')
-                ->setPrompt('Choose Sides');
+        $this->addSelect('steamedBuns', 'SteamedBuns', ['5' => '5', '10' => '10', '20' => '20'])
+                ->setRequired('Choose how much you need')
+                ->setPrompt('Choose amount');
         
-        $this->addSelect('drinks', 'Drinks', ['Soda'=>'Soda','Water'=>'Water','Juice'=>'Juice','Alcohol'=>'Alcohol'])
-                ->setRequired('Choose Drink')
-                ->setPrompt('Choose Drink');
+        $this->addSelect('mochi', 'Mochi', ['10'=>'10','20'=>'20','40'=>'40','80'=>'80'])
+                ->setRequired('Choose how much you need')
+                ->setPrompt('Choose amount');
         
-        $this->addRadioList('cheese', 'Cheese', ['Yes' => 'Yes', 'No' => 'No'])
+        $this->addRadioList('payment', 'Payment', ['Cash' => 'Cash', 'Card' => 'Card'])
                 ->setRequired('Choose if you want cheese')
                 ->getSeparatorPrototype()->setName('Cheese');
                 
