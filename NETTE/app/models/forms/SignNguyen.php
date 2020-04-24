@@ -17,6 +17,8 @@ class SignNguyen extends Nette\Application\UI\Form{
 
         $this->setAction($parent->link('SignNguyen:forgotPasswordNguyen'));
         
+        $this->setMethod("POST");
+        
         $this->addEmail('email', 'Email')
                 ->setRequired(' email is needed')
                 ->addRule(\Nette\Forms\Form::EMAIL, 'Not an valid address');
