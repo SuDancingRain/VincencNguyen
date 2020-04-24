@@ -10,7 +10,7 @@ namespace App\Presenters;
 
 /**
  * Description of AsiaPresenter
- *Formular na mexickou restauraci
+ *Formular na eshop s asijskymi prisadami
  * @author Dancing Rain
  */
 class AsiaPresenter extends \Nette\Application\UI\Presenter{
