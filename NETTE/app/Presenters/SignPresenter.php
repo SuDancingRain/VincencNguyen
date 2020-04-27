@@ -11,14 +11,20 @@ namespace App\Presenters;
  *
  * @author Dancing Rain
  */
-class SignNguyenPresenter extends \Nette\Application\UI\Presenter {
+class SignPresenter extends \Nette\Application\UI\Presenter {
     
-    public function createComponentSignNguyen($name) {
-        return new \SignNguyen($this, $name);
+    public function createComponentSign($name) {
+        return new \Sign($this, $name);
     }
     
     
-    public function actionForgotPasswordNguyen(){
+    public function actionForgotPassword(){
         
     }
-}
+    
+    public function actionSuccess(){
+        
+    }
+            
+            
+    }

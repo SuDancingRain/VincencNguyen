@@ -11,18 +11,22 @@
  *
  * @author Dancing Rain
  */
-class SignNguyen extends Nette\Application\UI\Form{
+class Sign extends Nette\Application\UI\Form{
     public function __construct($parent, $name) {
         parent::__construct();
 
-        $this->setAction($parent->link('SignNguyen:forgotPasswordNguyen'));
+        $this->setAction($parent->link('Sign:forgotPassword'));
         
-        $this->setMethod("POST");
+        $this->setMethod("formSubmitted");
         
         $this->addEmail('email', 'Email')
                 ->setRequired(' email is needed')
                 ->addRule(\Nette\Forms\Form::EMAIL, 'Not an valid address');
         
         $this->addSubmit('send', 'Send');
+        
+   
+        
     }
 }
+
