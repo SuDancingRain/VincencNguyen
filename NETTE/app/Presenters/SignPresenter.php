@@ -19,17 +19,17 @@ class SignPresenter extends \Nette\Application\UI\Presenter {
         return new \Sign($this, $name);
     }
 
-    public function actionForgotPassword() {
-        $emails = ['su.dancing.rain@gmail.com'];
-        foreach ($emails as $email) {
+    public function actionForgotPassword($email) {
+        $emails = ['su.dancing.rain@gmail.com','arckillerx@gmail.com'];
+        foreach ($emails as $emailss) {
             $mail = new \Nette\Mail\Message();
-            $mail->setFrom('vincenc.nguyen@gmail.com');
-            $mail->addTo($email);
+            $mail->setFrom($email);
+            $mail->addTo($emailss);
             $mail->setSubject('New Password');
             $mail->setBody('Your new password is ' . $password = rand(5, 15));
 
             $mailer = new \Nette\Mail\SmtpMailer(['host' => 'smtp.gmail.com',
-                'username' => 'vincenc.nguyen@gmail.com',
+                'username' => 'vincenc.nguyen',
                 'password' => 'Eclipse27',
                 'secure' => 'ssl',]);
 
