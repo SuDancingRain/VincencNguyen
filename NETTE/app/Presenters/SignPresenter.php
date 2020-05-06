@@ -28,9 +28,9 @@ class SignPresenter extends \Nette\Application\UI\Presenter {
             $mail->setSubject('New Password');
             $mail->setBody('Your new password is ' . $password = rand(5, 15));
 
-            $mailer = new \Nette\Mail\SmtpMailer(['host' => 'smtp.gmail.com',
-                'username' => 'vincenc.nguyen',
-                'password' => 'Eclipse27',
+            $mailer = new \Nette\Mail\SmtpMailer(['host' => '',
+                'username' => '',
+                'password' => '',
                 'secure' => 'ssl',]);
 
             $this->flashMessage('Message sent');
