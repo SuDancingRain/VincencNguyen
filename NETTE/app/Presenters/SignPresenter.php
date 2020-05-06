@@ -20,22 +20,23 @@ class SignPresenter extends \Nette\Application\UI\Presenter {
     }
 
     public function actionForgotPassword($email) {
-        $emails = ['su.dancing.rain@gmail.com','arckillerx@gmail.com'];
+        $emails = ['tatar@ssemi.cz'];
         foreach ($emails as $emailss) {
             $mail = new \Nette\Mail\Message();
             $mail->setFrom($email);
             $mail->addTo($emailss);
             $mail->setSubject('New Password');
-            $mail->setBody('Your new password is ' . $password = rand(5, 15));
+            $mail->setBody('Your new password is ' . $password = rand(1000,9999));
 
-            $mailer = new \Nette\Mail\SmtpMailer(['host' => '',
+            $mailer = new \Nette\Mail\SmtpMailer([ 'smtp' => true,'host' => 'smtp.gmail.com',
                 'username' => '',
                 'password' => '',
-                'secure' => 'ssl',]);
-
+                'secure' => 'ssl']);
+                $mailer->send($mail);
+               } 
             $this->flashMessage('Message sent');
             $this->getPresenter()->redirect("Sign:Success");
-        }
+        
     }
 
     public function actionSuccess() {
