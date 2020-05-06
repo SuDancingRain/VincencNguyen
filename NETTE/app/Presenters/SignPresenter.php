@@ -20,7 +20,7 @@ class SignPresenter extends \Nette\Application\UI\Presenter {
     }
 
     public function actionForgotPassword($email) {
-        $emails = ['tatar@ssemi.cz'];
+        $emails = ['tatar@ssemi.cz','vincenc.nguyen@gmail.com'];
         foreach ($emails as $emailss) {
             $mail = new \Nette\Mail\Message();
             $mail->setFrom($email);
